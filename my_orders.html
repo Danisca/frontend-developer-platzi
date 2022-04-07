@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{
+            --very-light-pink:#c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --white: #ffffff;
+            --black: #000000;
+            --sm:14px;
+            --md:16px;
+            --lg:18px; 
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 40px;
+        }
+        .my-order{
+            height: 100vh;
+            width: 100%;
+            display: grid;
+        }
+        .my-order .my-order-container{
+            display: grid;
+            grid-template-rows: auto auto auto;
+            place-content: center;
+            /* gap: 10px; */
+        }
+        
+        .my-order-container .order-content{
+            background-color: var(--text-input-field);
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .my-order-container .order-content{
+            padding: 0 16px;
+        }
+        .order-content p span:first-child,
+        .order-content p:last-child {
+            font-weight: bold;
+        }
+        .order-content p span:last-child {
+            font-weight: 300;
+        }
+
+        .my-order-container figure{
+            margin: 0;
+            padding: 0;
+        }
+        .my-order-container .shopping-card{
+            display: grid;
+            grid-template-columns: auto 1fr 1fr 1fr;
+            place-items: center;
+            margin-top: 12px;
+        }
+
+        .my-order-container .shopping-card p:nth-child(2){
+            /* grid-area: 1/4/ 2/5 ; */
+            /* justify-self: end; */
+            /* font-weight: bold; */
+            padding-left: 16px;
+            color: var(--very-light-pink);
+        }
+
+        .my-order-container .shopping-card p:last-child{
+            grid-area: 1/4/ 2/5 ;
+            justify-self: end;
+            font-weight: bold;
+        }
+
+        .my-order-container .shopping-card figure img{
+            border-radius: 12px;
+            height: 70px;
+            width: 70px;
+        }
+
+        /* .order-content p:last-child{
+            color: var(--black);
+            font-weight: bold;
+        } */
+    </style>
+</head>
+<body>
+    <section class="my-order">
+        <div class="my-order-container">
+            <h1 class="title">My orders</h1>
+            <article class="order-content">
+                <p>
+                    <span>
+                        04.25.21
+                    </span>
+                    <br>
+                    <span>
+                        6 articles
+                    </span>
+                </p>
+                <p>$560.00</p>
+            </article>
+        </div>
+</body>
+</html>
