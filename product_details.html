@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{
+            --very-light-pink:#c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --white: #ffffff;
+            --black: #000000;
+            --sm:14px;
+            --md:16px;
+            --lg:18px; 
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .product-info{
+            display: grid;
+            grid-template-rows: auto auto;
+            /* height: 100vh; */
+            width: 300px;
+            border: 1px solid var(--very-light-pink);
+            /* padding: 12px; */
+        }
+        .product-photos{
+            margin: 0;
+            padding: 0;
+        }
+        .product-photos img{
+            height: 300px;
+            width: 300px;
+            position: relative;
+            object-fit: cover;
+            border-bottom-right-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+        .close-menu-icon{
+            position: absolute;
+            bottom: 10px;
+            top: 10px;
+        }
+
+        .photos-btn{
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            margin-top: 8px;
+        }
+        .product-info .photos-btn div{
+            margin-right: 12px;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: var(--very-light-pink);
+        }
+        .product-info .photos-btn div:first-child{
+            background-color: var(--hospital-green);
+
+        }
+        .product-details{
+            display: grid;
+            grid-template-rows: auto auto auto;
+            justify-content: center;
+            /* align-content: center; */
+            padding: 0 24px;
+            margin-bottom: 20px;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+        }
+        .info .product-price{
+            font-size: var(--md);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .info .product-name{
+            font-size: var(--md);
+            /* color: var(--very-light-pink); */
+            font-weight: 300;
+            /* margin-bottom: 8px; */
+        }
+        .product-description{
+            font-weight: 300;
+
+        }
+        .btn{
+            height: 50px;
+            font-size: var(--md);
+            border:none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            font-weight: bold;
+            color: var(--text-input-field);
+            background-color: var(--hospital-green);
+            /* align-self: flex-end; */
+            /* margin-bottom: 18px; */
+
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="product-info">
+        <img class="close-menu-icon" src="./icons/icon_close.png" alt="close menu">
+        <figure class="product-photos">
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="bike">
+            <div class="photos-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </figure>
+        <article class="product-details">
+            <p class="info">
+                <span class="product-price">$120.00</span>
+                <span class="product-name">Retro refrigerador</span>
+            </p>
+            <p class="product-description">
+                Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit. Aspernatur necessitatibus 
+                officiis possimus aut voluptatem ea iure alias, 
+                repellat officia consectetur beatae at saepe 
+                optio 
+            </p>
+            <button class="btn">
+                <img src="./icons/bt_add_to_cart.svg" alt="">
+                add to car
+            </button>
+        </article>
+    </section>
+</body>
+</html>
