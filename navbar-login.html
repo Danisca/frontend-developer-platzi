@@ -40,11 +40,10 @@
         .menu-icon{
             display: none;
         }
-        .navbar .navbar-left, .navbar .navbar-right {
+        .navbar .navbar-left {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            height: 30px;
         }
         .navbar .navbar-left ul,
         .navbar .navbar-right ul{
@@ -53,13 +52,6 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .navbar .navbar-left .navbar-left-logo{
-            display: flex;
-            height: 30px;
-            justify-content: center;
-            /* align-items: center; */
         }
 
         .navbar .navbar-left ul li,
@@ -83,18 +75,9 @@
         .navbar .navbar-right ul li a {
             color: var(--black);
         }
-        .navbar .navbar-right ul li.login-link a{
-            color: var(--hospital-green);
-            font-weight: bolder;
-        }
         .shopping-car{
             position: relative;
         }
-
-        /* .shopping-car-with-items{
-            display: inline-block;
-            height: 30px;
-        } */
 
         .shopping-car div {
             width: 15px;
@@ -111,41 +94,20 @@
             .menu-icon{
                 display: block;
             }
-            .navbar{
-                padding: 12px 4px;
-            }
-
-            .navbar .navbar-left, .navbar .navbar-right{
-                justify-content: center;
-            }
-
-            .login-link{
-                display: none;
-            }
-
             .navbar-left ul:nth-child(2){
                 display: none;
             }
-            .navbar-right .user-email, .navbar-right .login-link{
+            .navbar-right .user-email{
                 display: none;
-            }
-            .navbar .navbar-left ul li, .navbar .navbar-right ul li {
-                margin-right: 0;
-                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-menu-item">
-            <img class="menu-icon" src="./icons/icon_menu.svg" alt="menu icon">
-
-        </div>
+        <img class="menu-icon" src="./icons/icon_menu.svg" alt="menu icon">
         <section class="navbar-left">
-            <div class="navbar-left-logo">
-                <img src="./logos/logo_yard_sale.svg" alt="">
-            </div>
+            <img src="./logos/logo_yard_sale.svg" alt="">
             <ul>
                 <li><a href="#">All</a></li>
                 <li><a href="#">Clothes</a></li>
@@ -158,11 +120,14 @@
         </section>
         <section class="navbar-right">
             <ul>
-                <li class="login-link"><a href="#">login</a></li>
-                
-                <li class="shopping-car-with-items">
-                    <img src="./icons/icon_shopping_cart_notification.svg" alt="">
+                <li class="user-email"><a href="#">platzi@example.com</a></li>
+                <li class="shopping-car">
+                    <img src="./icons/icon_shopping_cart.svg" alt="">
+                    <div>2</div>
                 </li>
+                <!-- <li class="shopping-car-with-items">
+                    <img src="./icons/icon_shopping_cart_notification.svg" alt="">
+                </li> -->
             </ul>
         </section>
     </nav>
